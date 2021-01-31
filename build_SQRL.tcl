@@ -104,7 +104,7 @@ if { $::argc > 0 } {
 set orig_proj_dir "[file normalize "$origin_dir/"]"
 
 # Create project
-create_project ${_xil_proj_name_} ./ -part xc7a200tfbg484-2 -force
+create_project ${_xil_proj_name_} ./ -part xc7a200tfbg484-2
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
