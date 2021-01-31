@@ -11,7 +11,7 @@ or a shikra).  These scripts specifically work with the Shikra
 (https://int3.cc/products/the-shikra), but you can subsitute your own
 custom interface script for the shikra script in the load scripts that
 I have provided.  For uploading to the onboard flash, I recommend using
-the .bin file type; the specific flash memory part is s25fl256xxxxxx0-spi-x1_x2_x4
+the .bin format; the specific flash memory part is s25fl256xxxxxx0-spi-x1_x2_x4
 
 To load the provided designs using an FT232H board, you will need to build
 openocd from the github source found here: https://github.com/ntfreak/openocd
