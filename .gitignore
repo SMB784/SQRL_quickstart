@@ -1,7 +1,5 @@
 /SQRL.sim
 /SQRL.runs
-!SQRL.runs/impl_1/SQRL_top.bit
-!SQRL.runs/impl_1/SQRL_top.bin
 /SQRL.hbs
 /SQRL.cache
 /SQRL.hw
