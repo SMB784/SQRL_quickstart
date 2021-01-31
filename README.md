@@ -56,4 +56,3 @@ board is provided below:
 |01---> 3.3V  
 |----------------->  
 |
-|
