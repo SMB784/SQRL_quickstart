@@ -34,8 +34,7 @@
 
 puts [exec cp -a ./SQRL.srcs/sources_1/. ./srcs/]
 
-#puts [exec rm -rf ./SQRL.srcs]
-#file delete -force $./obediah.srcs
+puts [exec rm -rf ./SQRL.srcs]
 
 # Set the reference directory for source file relative paths (by default the value is script >
 set origin_dir [file dirname [info script]]
@@ -131,7 +130,7 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 set obj [get_filesets sources_1]
 # Import local files from the original project
 set files [list \
- [file normalize "${origin_dir}/SQRL.srcs/sources_1/new/SQRL_top.sv" ]\
+ [file normalize "${origin_dir}/srcs/sources_1/new/SQRL_top.sv" ]\
 ]
 set imported_files [import_files -fileset sources_1 $files]
 
