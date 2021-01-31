@@ -97,7 +97,7 @@ if { $::argc > 0 } {
 }
 
 # Set the directory path for the original project from where this script was exported
-set orig_proj_dir "[file normalize "$origin_dir/../../"]"
+set orig_proj_dir "[file normalize "$origin_dir/"]"
 
 # Create project
 create_project ${_xil_proj_name_} ./${_xil_proj_name_} -part xc7a200tfbg484-2
@@ -126,7 +126,7 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 set obj [get_filesets sources_1]
 # Import local files from the original project
 set files [list \
- [file normalize "${origin_dir}/../../SQRL.srcs/sources_1/new/SQRL_top.sv" ]\
+ [file normalize "${origin_dir}/SQRL.srcs/sources_1/new/SQRL_top.sv" ]\
 ]
 set imported_files [import_files -fileset sources_1 $files]
 
@@ -152,7 +152,7 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
 set obj [get_filesets constrs_1]
 
 # Add/Import constrs file and set constrs file properties
-set file "[file normalize "$origin_dir/../../SQRL.srcs/constrs_1/LED_IO_master.xdc"]"
+set file "[file normalize "$origin_dir/SQRL.srcs/constrs_1/LED_IO_master.xdc"]"
 set file_imported [import_files -fileset constrs_1 [list $file]]
 set file "constrs_1/LED_IO_master.xdc"
 set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
