@@ -34,7 +34,7 @@
 
 puts [exec cp -a ./SQRL.srcs/sources_1/. ./srcs/]
 
-puts [exec rm -rf ./SQRL.srcs]
+#puts [exec rm -rf ./SQRL.srcs]
 #file delete -force $./obediah.srcs
 
 # Set the reference directory for source file relative paths (by default the value is script >
