@@ -104,7 +104,7 @@ if { $::argc > 0 } {
 set orig_proj_dir "[file normalize "$origin_dir/"]"
 
 # Create project
-create_project ${_xil_proj_name_} ./ -part xc7a200tfbg484-2
+create_project ${_xil_proj_name_} ./ -part xc7a200tfbg484-2 -force
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
@@ -156,7 +156,7 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
 set obj [get_filesets constrs_1]
 
 # Add/Import constrs file and set constrs file properties
-set file "[file normalize "$origin_dir/SQRL.srcs/constrs_1/LED_IO_master.xdc"]"
+set file "[file normalize "$origin_dir/srcs/constrs_1/LED_IO_master.xdc"]"
 set file_imported [import_files -fileset constrs_1 [list $file]]
 set file "constrs_1/LED_IO_master.xdc"
 set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
