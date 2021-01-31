@@ -32,7 +32,7 @@
 #
 #*****************************************************************************************
 
-puts [exec cp -a ./SQRL.srcs/sources_1/. ./srcs/]
+puts [exec cp -a ./SQRL.srcs/. ./srcs/]
 
 puts [exec rm -rf ./SQRL.srcs]
 
