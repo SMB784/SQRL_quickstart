@@ -33,7 +33,7 @@ FT232H board)
 The pinout and output frequenceis for the Hirose DF52 connector mounted to the
 board is provided below:
 
-_________________
+-----------------
 |20---> GND
 |19---> 6.1  kHz
 |18---> 12.2 kHz
@@ -54,6 +54,4 @@ _________________
 |03---> 12.5 MHz
 |02---> 3.3V
 |01---> 3.3V
-_________________
-
-----------------
+-----------------
