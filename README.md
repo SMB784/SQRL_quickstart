@@ -35,8 +35,9 @@ This will install openocd and allow you to use the provided scripts for loading
 these designs onto the FPGA or its flash memory using a shikra (or your own
 FT232H board)
 
-The pinout and output frequencies for the Hirose DF52 connector mounted to the
-board is provided below:
+The pinout for the Hirose DF52 connector mounted to the board and output
+frequencies defined for the hardware configuration in this repository
+are provided below:
 
 |-------------------->  
 |20---> GND  
