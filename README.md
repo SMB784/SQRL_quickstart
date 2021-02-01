@@ -38,7 +38,7 @@ FT232H board)
 The pinout and output frequencies for the Hirose DF52 connector mounted to the
 board is provided below:
 
-|--------------------|  
+|-------------------->  
 |20---> GND  
 |19---> 6.1  kHz  
 |18---> 12.2 kHz  
@@ -59,6 +59,6 @@ board is provided below:
 |03---> 12.5 MHz  
 |02---> 3.3V  
 |01---> 3.3V  
-|--------------------|  
+|-------------------->  
 
 To get 3.3V operation on pins 15, 16, 18, and 19, you will need to remove the U11 regulator (schematic found here: https://raw.githubusercontent.com/RHSResearchLLC/NiteFury-and-LiteFury/master/Hardware/uEVB.pdf) and short the input and output pins together on the U11 pad.
