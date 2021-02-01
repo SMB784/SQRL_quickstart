@@ -18,7 +18,7 @@ To load the provided designs using an FT232H board, you will need to build
 openocd from the github source found here: https://github.com/ntfreak/openocd
 
 After cloning the openocd git repository and running .bootstrap,
-the following line in flash configuration file found at
+change the following line in flash configuration file found at
 openocd/src/flash/nor/spi.c from:
 
 FLASH_ID("sp s25fl256s", 0x13, 0x00, 0x12, 0xdc, 0xc7, 0x00190201, 0x100, 0x10000, 0x800000),
