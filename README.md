@@ -40,7 +40,8 @@ The pinout for the Hirose DF52 connector mounted to the board and output
 frequencies defined for the hardware configuration in this repository
 are provided below:
 
-Top View, outputs --->  
+TOP VIEW  
+(outputs --->)  
 |-------------------->  
 |20---> GND  
 |19---> 6.1  kHz  
