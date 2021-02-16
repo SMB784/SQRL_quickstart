@@ -2,7 +2,8 @@ This is a small repository containing a build script necessary to
 recreate the vivado project that will upload a basic load-out
 configuration for the SQRL Acorn CLE 215/215+ Artix7 FPGA board.
 This configuration will blink all available LEDs and output unique
-square wave frequencies on all available output pins (see pinout
+square wave frequencies on all available output pins from the GPIO
+bank underneath the heat sink on the top side of the board. (see pinout
 for the Hirose DF52 connector below).
 
 I have also created a couple scripts for uploading the post-implementation
@@ -39,6 +40,7 @@ The pinout for the Hirose DF52 connector mounted to the board and output
 frequencies defined for the hardware configuration in this repository
 are provided below:
 
+Top View, outputs --->
 |-------------------->  
 |20---> GND  
 |19---> 6.1  kHz  
