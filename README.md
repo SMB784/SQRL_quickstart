@@ -73,3 +73,5 @@ There's an excellent Thunderbolt to USB-C enclosure that fits this board perfect
 ![SQRL_in_TBolt_Case](https://user-images.githubusercontent.com/14501817/135922713-b69c604e-2131-41af-a6e5-9036626ee039.jpeg)
 ![SQRL_TBolt](https://user-images.githubusercontent.com/14501817/135922710-2ada5039-e62d-4d51-8792-b59952244e62.jpeg)
 ![SQRL_TBolt_Functional](https://user-images.githubusercontent.com/14501817/135945759-2c006591-33b9-40f0-8171-7ceb8d46266d.jpeg)
+
+Before interacting with this device via PCIe, read this article on how to correct issues the installation with Xilinx's XDMA drivers (these now work with Ubuntu 20.04 & kernel 5.11.0-38-generic)
