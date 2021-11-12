@@ -1,3 +1,5 @@
+## SQRL Quickstart
+
 This is a small repository containing a build script necessary to recreate the vivado project that will upload a basic load-out configuration for the SQRL Acorn CLE 215/215+ Artix7 FPGA board. This configuration will blink all available LEDs and output unique square wave frequencies on all available output pins from the GPIO bank underneath the heat sink on the top side of the board. (see pinout for the Hirose DF52 connector below).
 
 I have also created a couple scripts for uploading the post-implementation .bit & .bin files using an FT232H based board (similar to a bus pirate or a shikra).  These scripts specifically work with the Shikra (https://int3.cc/products/the-shikra), but you can subsitute your own custom interface configuration in place of the shikra configuration in the load scripts that I have provided.  For uploading to the onboard flash, I recommend using a memory configuration file in the .bin format (that's what I wrote my upload scripts for anyway); the specific flash memory part is s25fl256xxxxxx0-spi-x1_x2_x4
