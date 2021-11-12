@@ -1,2 +1,0 @@
-#!/bin/bash
-openocd -s ./SQRL.program_scripts -f xilinx-artix7.cfg
