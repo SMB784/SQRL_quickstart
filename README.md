@@ -68,3 +68,5 @@ You can verify that your SQRL board is working correctly by using litepcie_util 
 ![SQRL_in_TBolt_Case](https://user-images.githubusercontent.com/14501817/135922713-b69c604e-2131-41af-a6e5-9036626ee039.jpeg)
 ![SQRL_TBolt](https://user-images.githubusercontent.com/14501817/135922710-2ada5039-e62d-4d51-8792-b59952244e62.jpeg)
 ![SQRL_TBolt_Functional](https://user-images.githubusercontent.com/14501817/135945759-2c006591-33b9-40f0-8171-7ceb8d46266d.jpeg)
+![DMA_speed](https://user-images.githubusercontent.com/14501817/141536949-80a68b07-6392-495e-8c9b-67e2dcd66f99.png)
+
