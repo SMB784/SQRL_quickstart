@@ -60,9 +60,9 @@ cd build/sqrl_acorn/driver/kernel/
 sudo ./init.sh
 ```
 
-You may have to remove the driver (sudo rmmod litepcie) and reinstall it once or twice using init.sh to get it to show up on ```sh lsmod | grep litepcie ```
+You may have to remove the driver (sudo rmmod litepcie) and reinstall it once or twice using init.sh to get it to show up on ``` lsmod | grep litepcie ```
 
-You can verify that your SQRL board is working correctly by using litepcie_util from within the build/sqrl_acorn/driver/user/ to run various tests or to upload new flash bitstreams.  Use ```sh ./litepcie_util ``` to show you the available tests and commands.
+You can verify that your SQRL board is working correctly by using litepcie_util from within the build/sqrl_acorn/driver/user/ to run various tests or to upload new flash bitstreams.  Use ``` ./litepcie_util ``` to show you the available tests and commands.
 
 ![SQRL_on_TBolt](https://user-images.githubusercontent.com/14501817/135922715-6cb1ca1f-d871-4a02-83e2-ecb621f50c8c.jpeg)
 ![SQRL_in_TBolt_Case](https://user-images.githubusercontent.com/14501817/135922713-b69c604e-2131-41af-a6e5-9036626ee039.jpeg)
