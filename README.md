@@ -14,7 +14,9 @@ FLASH_ID("sp s25fl256s", 0x03, 0x00, 0x02, 0xd8, 0xc7, 0x00190201, 0x100, 0x1000
 
 Then run:
 
+```sh
 ./configure --enable-ftdi && make && sudo make install
+```
 
 This will install openocd and allow you to use the provided scripts for loading these designs onto the FPGA or its flash memory using a shikra (or your own FT232H board)
 
@@ -51,14 +53,16 @@ There's an excellent Thunderbolt to USB-C enclosure that fits this board perfect
 
 In order to interact with this device via PCIe, you will need to install LiteX (follow the installation guide here: https://github.com/enjoy-digital/litex).  You will then need to install the litepcie drivers.  This can be done by invoking the following commands from within the directory where you cloned the litex repository:
 
+```sh
 cd litex-boards/litex_boards/targets
 ./sqrl_acorn.py --driver
 cd build/sqrl_acorn/driver/kernel/
 sudo ./init.sh
+```
 
-You may have to remove the driver (sudo rmmod litepcie) and reinstall it once or twice using init.sh to get it to show up on lsmod | grep litepcie
+You may have to remove the driver (sudo rmmod litepcie) and reinstall it once or twice using init.sh to get it to show up on ```sh lsmod | grep litepcie ```
 
-You can verify that your SQRL board is working correctly by using litepcie_util from within the build/sqrl_acorn/driver/user/ to run various tests or to upload new flash bitstreams.  Use ./litepcie_util to show you the available tests and commands.
+You can verify that your SQRL board is working correctly by using litepcie_util from within the build/sqrl_acorn/driver/user/ to run various tests or to upload new flash bitstreams.  Use ```sh ./litepcie_util ``` to show you the available tests and commands.
 
 ![SQRL_on_TBolt](https://user-images.githubusercontent.com/14501817/135922715-6cb1ca1f-d871-4a02-83e2-ecb621f50c8c.jpeg)
 ![SQRL_in_TBolt_Case](https://user-images.githubusercontent.com/14501817/135922713-b69c604e-2131-41af-a6e5-9036626ee039.jpeg)
