@@ -1,6 +1,6 @@
 ## SQRL Quickstart
 
-This is a small repository that will upload a basic load-out configuration for the SQRL Acorn CLE 215/215+ Artix7 FPGA board. This configuration will blink all available LEDs and output unique square wave frequencies on all available output pins from the GPIO bank underneath the heat sink on the top side of the board, and allows for PCIe communication using the LiteX litepcie interface (see pinout for the Hirose DF52 connector below).
+This is a small repository that will upload a basic load-out configuration for the SQRL Acorn CLE 215/215+ Artix7 FPGA board. This configuration will blink all available LEDs and output unique square wave frequencies on all available output pins from the GPIO bank underneath the heat sink on the top side of the board (see pinout for the Hirose DF52 connector below), and allows for PCIe communication using the LiteX litepcie interface.
 
 I have also created a couple scripts for uploading the bitstream files using an FT232H based board (similar to a bus pirate or a shikra).  These scripts specifically work with the Shikra (https://int3.cc/products/the-shikra), but you can subsitute your own custom interface configuration in place of the shikra configuration in the load scripts that I have provided.  For uploading to the onboard flash, I recommend using a memory configuration file in the .bin format (that's what I wrote my upload scripts for anyway); the specific flash memory part is s25fl256xxxxxx0-spi-x1_x2_x4
 
@@ -62,9 +62,21 @@ cd build/sqrl_acorn/driver/kernel/
 sudo ./init.sh
 ```
 
-You may have to remove the driver (sudo rmmod litepcie) and reinstall it once or twice using init.sh to get it to show up on ``` lsmod | grep litepcie ```
+You may have to remove the driver (``` sudo rmmod litepcie ```) and reinstall it once or twice using init.sh to get it to show up on ``` lsmod | grep litepcie ```
 
 You can verify that your SQRL board is working correctly by using litepcie_util from within the build/sqrl_acorn/driver/user/ to run various tests or to upload new flash bitstreams.  Use ``` ./litepcie_util ``` to show you the available tests and commands.
+
+If you would like to add your own custom hardware design to the bitstream, I recommend the following steps:
+
+1. build the default sqrl_acorn bitstream from within the litex/litex-boards/litex_boards/targets/ directory: ``` ./sqrl_acorn.py --uart-name=crossover --with-pcie --build --driver ```
+2. navigate to the gateware directory for the sqrl acorn bitstream you just built: ``` cd build/sqrl_acorn/gateware/ ```
+3. edit ``` sqrl_acorn.v ``` and ``` sqrl_acorn.xdc ``` in that directory to include your own custom hardware design and constraints
+4. run vivado in batch mode to regenerate the bitstream with new hardware added in: ``` /tools/Xilinx/Vivado/2020.1/bin/vivado -mode batch -source sqrl_acorn.tcl ``` (note: your vivado binary may be in a different directory, choose your directory path for vivado accordingly)
+5. once the new bitstream has been generated, navigate to the user directory: ``` cd ../driver/user/ ```
+6. upload the new bitstream using the litepcie_util tool: ``` ./litepcie_util --flash_write ../../sqrl_acorn.bin ```
+7. reflash the fpga using the litepcie_util tool: ``` ./litepcie_util --flash_reload ```
+
+This should result in your custom bitstream being loaded onto the Acorn CLE-215(+) via the PCIe connection.
 
 ![SQRL_on_TBolt](https://user-images.githubusercontent.com/14501817/135922715-6cb1ca1f-d871-4a02-83e2-ecb621f50c8c.jpeg)
 ![SQRL_in_TBolt_Case](https://user-images.githubusercontent.com/14501817/135922713-b69c604e-2131-41af-a6e5-9036626ee039.jpeg)
