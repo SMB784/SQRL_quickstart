@@ -68,7 +68,7 @@ You can verify that your SQRL board is working correctly by using litepcie_util 
 
 If you would like to add your own custom hardware design to the bitstream, I recommend the following steps:
 
-1. build the default sqrl_acorn bitstream from within the litex/litex-boards/litex_boards/targets/ directory: ``` ./sqrl_acorn.py --uart-name=crossover --with-pcie --build --driver ```
+1. build the default sqrl_acorn bitstream from within the ``` litex/litex-boards/litex_boards/targets/ ``` directory: ``` ./sqrl_acorn.py --uart-name=crossover --with-pcie --build --driver ```
 2. navigate to the gateware directory for the sqrl acorn bitstream you just built: ``` cd build/sqrl_acorn/gateware/ ```
 3. edit ``` sqrl_acorn.v ``` and ``` sqrl_acorn.xdc ``` in that directory to include your own custom hardware design and constraints
 4. run vivado in batch mode to regenerate the bitstream with new hardware added in: ``` /tools/Xilinx/Vivado/2020.1/bin/vivado -mode batch -source sqrl_acorn.tcl ``` (note: your vivado binary may be in a different directory, choose your directory path for vivado accordingly)
