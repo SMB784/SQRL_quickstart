@@ -84,4 +84,4 @@ This should result in your custom bitstream being loaded onto the Acorn CLE-215(
 ![SQRL_TBolt_Functional](https://user-images.githubusercontent.com/14501817/135945759-2c006591-33b9-40f0-8171-7ceb8d46266d.jpeg)
 ![DMA_speed](https://user-images.githubusercontent.com/14501817/141536949-80a68b07-6392-495e-8c9b-67e2dcd66f99.png)
 
-BIG shout-out to @sldif, Florent Kermarrec of EnjoyDigital, and Dave Reynolds of RHS Research for all their help getting this project up and running.
+BIG shout-out to Florent Kermarrec of EnjoyDigital, Dave Reynolds of RHS Research, @sldif and the entire FPGA Discord community for all their help getting this project up and running.
