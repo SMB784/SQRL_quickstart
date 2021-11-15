@@ -1,5 +1,5 @@
 #!/bin/bash
-openocd -f ./SQRL.program_scripts/openocd.cfg &
+openocd -f ./SQRL_quickstart.program_scripts/openocd.cfg &
 sleep 1
 (echo "init"; echo "jtagspi_init 0 ./SQRL_quickstart.program_scripts/bscan_spi_xc7a200t.bit"; echo "jtagspi_program ./SQRL_quickstart.program_scripts/SQRL_quickstart.bin 0x0"; echo "fpga_program"; echo "exit"; echo "quit"; sleep 150) | telnet localhost 4444
 pkill -f openocd
